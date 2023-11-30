@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "time_cap_backend": {
+      "candid": "src/time_cap_backend/time_cap_backend.did",
+      "package": "time_cap_backend",
+      "type": "rust"
+    },
+    "time_cap_frontend": {
+      "dependencies": [
+        "time_cap_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/time_cap_frontend/src/index.html"
+      },
+      "source": [
+        "src/time_cap_frontend/assets",
+        "dist/time_cap_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
